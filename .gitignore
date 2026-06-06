@@ -1,0 +1,10 @@
+# Large data inputs — fetched from Hugging Face, not stored in git (see download_data.py)
+data/
+*.parquet
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
