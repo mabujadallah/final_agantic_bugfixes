@@ -61,8 +61,11 @@ data/                      Parquet inputs — NOT in git (fetched via download_d
 
 ## Notes and limitations
 
-- This uses the **full** dataset (no project-popularity filter), so the overall rejection rate (~16%) is lower than the
-  46% reported in the MSR paper, which only looked at popular (>100-star) projects.
+- The data is from **popular (>100-star)** repositories — the same population as the MSR paper (it is seeded from
+  AIDev's popular subset, `hao-li/AIDev`, by the collector). So the lower overall rejection rate here (~16%) is **not**
+  a popularity effect; it most likely reflects a **much larger and more recent re-collection** (121,832 agent fix PRs
+  spanning Dec 2024–Feb 2026 vs ~3,225 in the paper's earlier snapshot), with more settled merge outcomes. The two
+  numbers are not directly comparable.
 - The "switching agents" analysis (RQ2b) only sees fixes that explicitly mention an issue (~18% of fixes).
 - Revert counts (RQ4) are a lower bound — only reverts that go through PRs are visible.
 - Bug types (RQ5) come from keyword matching on the PR title/description and should be spot-checked by hand

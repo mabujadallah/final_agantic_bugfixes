@@ -468,8 +468,10 @@ md(r"""
 ## What to keep in mind
 
 - We compare agents and humans only inside the **1,218 repos that have both**, so the comparison is fair.
-  (On the full dataset the overall rejection rate is ~16%, lower than the 46% in our MSR paper, which only looked at
-  popular, >100-star projects.)
+- The data is from **popular (>100-star)** repos — the same population as our MSR paper (it is seeded from AIDev's
+  popular subset, `hao-li/AIDev`). So the lower overall rejection rate here (~16%) is **not** a popularity effect; it most
+  likely reflects a **much larger, more recent re-collection** (121,832 agent fix PRs through Feb 2026 vs ~3,225 in the
+  paper's earlier snapshot), with more settled merge outcomes. The two rates aren't directly comparable.
 - A couple of measures are approximate: the "switching agents" part only sees fixes that mention an issue (~18%),
   and the revert count is a lower bound.
 - The bug types (RQ5) come from keywords in the text, so they should be spot-checked by hand before publishing.
