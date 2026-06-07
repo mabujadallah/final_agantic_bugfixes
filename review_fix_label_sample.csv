@@ -1,0 +1,201 @@
+id,html_url,agent,group,btype,title
+2210984598,https://github.com/tscircuit/tscircuit.com/pull/333,Claude_Code,agent,build_ci,fix(deps): update dependency updates
+2222549952,https://github.com/FriendsOfShopware/shopmon/pull/365,Claude_Code,agent,network,fix(deps): bump the all group across 1 directory with 30 updates
+2971298643,https://github.com/Cap-go/capacitor-native-audio/pull/197,Claude_Code,agent,build_ci,fix(deps): update dependency androidx.media:media to v1.7.1
+3108445263,https://github.com/Nine-Minds/alga-psa/pull/1451,Claude_Code,agent,other_logic,fix: handle Date objects from pg driver for time_periods date columns
+2716220329,https://github.com/pezware/mirubato/pull/427,Claude_Code,agent,ui,Fix About icon similarity with Timer icon (#416)
+2466058972,https://github.com/trufflesecurity/trufflehog/pull/4065,Claude_Code,agent,network,fix(deps): update module cloud.google.com/go/secretmanager to v1.14.7
+3221081040,https://github.com/mlflow/mlflow/pull/20426,Claude_Code,agent,typo_doc,Cherry-pick patch PRs for 3.9.0
+2424702840,https://github.com/kubernetes-sigs/cloud-provider-azure/pull/8759,Claude_Code,agent,network,[release-1.30] fix: Remove the shared slb health probe after the last cluster servic…
+2699050324,https://github.com/contentful/marketplace-partner-apps/pull/5751,Claude_Code,agent,ui,fix(deps): bump the production-dependencies group in /apps/hugging-face with 2 updates
+2689525780,https://github.com/MemberJunction/MJ/pull/1197,Claude_Code,agent,other_logic,Fix cascade delete procedures after AIAgentRun schema changes
+2592269362,https://github.com/kazuya-tanimoto/freee-receipt-automation/pull/15,Claude_Code,agent,build_ci,fix: exclude CLAUDE.md from markdown linting
+2665219308,https://github.com/MervinPraison/PraisonAI/pull/916,Claude_Code,agent,other_logic,Fix: resolve duplicate callback execution in LLM interaction handling
+2327551427,https://github.com/ast-grep/ast-grep/pull/1798,Claude_Code,agent,build_ci,fix(deps): update rust crate toml_edit to v0.22.24
+2928241056,https://github.com/tpu-kanglabs/ub-moji/pull/86,Claude_Code,agent,build_ci,fix(deps): update dependency astro to ^5.14.5
+2650589954,https://github.com/Significant-Gravitas/AutoGPT/pull/10328,Claude_Code,agent,other_logic,fix(backend): Include node execution steps and cost of sub-graph execution
+2640105723,https://github.com/contentful/marketplace-partner-apps/pull/5437,Claude_Code,agent,build_ci,fix(deps): bump @contentful/f36-components from 4.80.4 to 4.80.5 in /apps/wix in the production-dependencies group
+2949184112,https://github.com/kubeasy-dev/website/pull/70,Claude_Code,agent,build_ci,fix(deps): update dependency zod to v4
+2644741108,https://github.com/DollhouseMCP/mcp-server/pull/80,Claude_Code,agent,build_ci,"Fix critical CI path resolution issues (Issues #78, #79)"
+2607105407,https://github.com/BeehiveInnovations/pal-mcp-server/pull/89,Claude_Code,agent,build_ci,fix: respect OPENROUTER_ALLOWED_MODELS in listmodels tool
+2236140727,https://github.com/grafbase/grafbase/pull/2469,Claude_Code,agent,build_ci,fix(deps): update dependencies-non-major
+2947916024,https://github.com/owncast/owncast/pull/4653,Claude_Code,agent,network,fix(deps): update module github.com/twin/go-away to v1.8.1
+2662525944,https://github.com/Pettor/template-web-app-react-enterprise/pull/72,Claude_Code,agent,build_ci,fix(deps): update dependency react-hook-form to v7.60.0
+2731280779,https://github.com/lqvp/ai/pull/210,Claude_Code,agent,build_ci,fix(deps): update dependency @napi-rs/canvas to v0.1.77
+2626217563,https://github.com/24taro/notebooklm-collector/pull/234,Claude_Code,agent,security_auth,fix(slack): CORSエラー修正とUI改善
+2594822613,https://github.com/backstage/backstage/pull/30255,Claude_Code,agent,network,fix(deps): update codemirror to v6.11.1
+2630932664,https://github.com/hamkichi/homebridge-echonet-lite-eolia/pull/18,Claude_Code,agent,data_parse,fix: make version tests dynamic for NPM publish workflow
+2817358297,https://github.com/yoshiko-pg/difit/pull/92,Claude_Code,agent,other_logic,fix: make --clean flag properly reset viewed files counter
+2662433364,https://github.com/blaze-commerce/blazecommerce-wp-plugin/pull/340,Claude_Code,agent,other_logic,Fix: Restore Claude AI Review Functionality
+2370986054,https://github.com/synapsecns/sanguine/pull/3557,Claude_Code,agent,security,fix(deps): update module github.com/ethereum/go-ethereum to v1.13.15 [security]
+2332581686,https://github.com/mlflow/mlflow/pull/14569,Claude_Code,agent,typo_doc,Fix `Dataset.source` and `Dataset.source_type` docs
+2592741820,https://github.com/tktcorporation/vrchat-albums/pull/437,Claude_Code,agent,performance,fix: remove session duration limits and optimize query performance
+2272919599,https://github.com/contentful/marketplace-partner-apps/pull/4066,Claude_Code,agent,build_ci,fix(deps): bump the production-dependencies group across 1 directory with 2 updates
+3205159291,https://github.com/YJSN180/nico-ranking-custom/pull/213,Claude_Code,agent,other_logic,fix: タッチリスナーの過剰な再登録を修正 (#189)
+2940056575,https://github.com/DollhouseMCP/mcp-server/pull/1394,Claude_Code,agent,build_ci,hotfix: Update server.json version to 1.9.22
+2715040549,https://github.com/UltimatePea/chinese-ocaml/pull/2120,Claude_Code,agent,other_logic,Fix #2117: 修复rhyme_engine.ml编译警告 - 抑制unused字段和函数警告
+2458569884,https://github.com/Azure/LogicAppsUX/pull/7027,Claude_Code,agent,other_logic,fix(vscode): Delete statusCode from root def 
+2632683738,https://github.com/junichiro/tobelog/pull/25,Claude_Code,agent,build_ci,fix: Remove all compilation warnings and fix database connection
+2888739700,https://github.com/delano/familia/pull/156,Claude_Code,agent,network,Fix middleware registration and add reconnect! method
+2653221757,https://github.com/openemr/openemr-devops/pull/466,Claude_Code,agent,network,fix(shellcheck): SC2312
+2664418440,https://github.com/SuzumiyaAoba/jsont/pull/38,Claude_Code,agent,data_parse,Fix JSON syntax highlighting for edge cases
+2553331222,https://github.com/microsoft/vscode/pull/250083,Copilot,agent,other_logic,Fix GitHub workflows to check file changes before user permissions
+2847913210,https://github.com/Arcane-Fly/Z2/pull/130,Copilot,agent,build_ci,"Fix Railway deployment failures: resolve corepack hash mismatch, secure JWT configuration, and eliminate build conflicts"
+2378471358,https://github.com/FriendsOfREDAXO/pdfout/pull/86,Copilot,agent,other_logic,PAGENO Fix
+2662312865,https://github.com/NiuStar-Byte/smart-filter-v14/pull/11,Copilot,agent,other_logic,Fix UTC timezone filtering and TOKENS filtering in PEC backtest
+2623096585,https://github.com/seanmobrien/we-dont-need-no-education/pull/90,Copilot,agent,performance,"Fix excessively slow grid renders by optimizing caching, polling, and pagination"
+3072154312,https://github.com/microsoft/perfview/pull/2346,Copilot,agent,typo_doc,Fix merge command line order in kubernetes documentation
+2673253488,https://github.com/mupai555/MUPAI/pull/12,Copilot,agent,other_logic,Fix caloric deficit/surplus adjustment logic for FRI and sleep penalty
+2701737863,https://github.com/WebQx/EMR/pull/34,Copilot,agent,network,"Resolve merge conflicts for PR #23: Enhanced PharmacyLocator component with TypeScript, error handling, and accessibility"
+2907043451,https://github.com/saebyn/glowing-telegram/pull/523,Copilot,agent,build_ci,Fix embedding-service missing ECR definition and deployment configuration
+2650985836,https://github.com/Treytucker05/powerhouse-tracker/pull/52,Copilot,agent,ui,Fix lint:ci scripts to allow warnings without failing CI
+2661575942,https://github.com/gleidsonlm/placemyshop-backend/pull/17,Copilot,agent,network,Pull request for issue #14
+2677653651,https://github.com/opentelemetrybot/opentelemetry-js/pull/49,Copilot,agent,security_auth,Fix minimum token permissions for workflows that perform git push operations
+2679286760,https://github.com/timlawrenz/jubilant-palm-tree/pull/65,Copilot,agent,other_logic,Fix notebook hanging issue by implementing robust tqdm wrapper and fallback progress reporter
+2989192205,https://github.com/dotnet/aspire/pull/12806,Copilot,agent,build_ci,Fix flaky ExecuteCommandAsync tests by removing DCP dependency
+2673845669,https://github.com/Quafadas/netlib/pull/2,Copilot,agent,other_logic,Fix DGEMM bounds checking for matrices with offsets
+3037094194,https://github.com/OWASP-BLT/BLT/pull/4966,Copilot,agent,typing,[WIP] Fix TypeError in AdventureListView
+3002741297,https://github.com/HackerspaceMumbai/Visage/pull/196,Copilot,agent,crash,"Fix code review feedback: LINQ optimization, null safety, exception handling"
+2664757673,https://github.com/SonnyS10/Multisensory-Stimulus-Presentation-and-Data-Collection-System/pull/5,Copilot,agent,ui,Fix mirror widget instruction display for tactile tests
+3057589867,https://github.com/Forneck/vitalia-reborn/pull/665,Copilot,agent,other_logic,Fix duplicated aura damage reflection and add element-specific messages
+2780188531,https://github.com/mupai555/mupai555/pull/38,Copilot,agent,ui,Fix expander styling and functional questionnaire access for all users
+2681780781,https://github.com/Bullrich/tldr-rss/pull/7,Copilot,agent,crash,Fix issue #6: Add error handling for 404 and network failures in fetchNews
+2859202117,https://github.com/SolaceHarmony/Thea-Code/pull/201,Copilot,agent,other_logic,Fix inconsistent tab switching behavior in SettingsView
+2716529275,https://github.com/Walter905-creator/fixloapp/pull/123,Copilot,agent,ui,Fix PostCSS configuration and package.json corruption for Tailwind CSS build
+3316817013,https://github.com/microsoft/kiota/pull/7408,Copilot,agent,other_logic,[WIP] Fix multiple constructors issue in HttpClientRequestAdapter
+2575677504,https://github.com/Z43L/SOC/pull/133,Copilot,agent,network,Fix agent WebSocket configuration: set websocket as default transport and correct field names
+3034795285,https://github.com/tylermilner/pickdiff/pull/58,Copilot,agent,ui,Strip git diff headers from diff output
+2897712096,https://github.com/ivanopaulon/EventForge/pull/468,Copilot,agent,data_parse,Fix inventory document row data quality issues - Add proper field tracking and eliminate metadata parsing
+3053813268,https://github.com/opsmill/infrahub/pull/7755,Copilot,agent,ui,[WIP] Fix ConvertObjectType mutation to handle null attribute_value
+2887624442,https://github.com/billlzzz10/notion-mcp-server/pull/35,Copilot,agent,security,Fix security vulnerabilities
+2854319819,https://github.com/aarondglover/clear-hl7-net/pull/5,Copilot,agent,other_logic,"Fix DateTime precision hierarchy, add culture parameter support, and convert ALL segments"
+2786895753,https://github.com/OzCog/cogmo/pull/100,Copilot,agent,build_ci,Fix PLN CMakeLists.txt cmake module include paths
+3040800930,https://github.com/open-telemetry/opentelemetry-rust/pull/3264,Copilot,agent,build_ci,fix: Remove unused tracing dependency from opentelemetry-otlp
+3171597577,https://github.com/Azure/data-api-builder/pull/3056,Copilot,agent,data_parse,Fix serialization object mutation and implement double-encoding escaping mechanism
+2679030737,https://github.com/AffanP2L/LIFE-OF-A-P2L/pull/7,Copilot,agent,other_logic,Copilot/fix 3a27a5c0 bc6e 49bf 8e70 91a523999b4a
+2559078200,https://github.com/rodneyg/SafeDose/pull/178,Copilot,agent,security_auth,Fix Sign Out: Add loading state and improved UX feedback
+2693066133,https://github.com/ambicuity/ambicuity/pull/2,Copilot,agent,ui,Fix empty repository showcase and GitHub activity sections in profile README
+3008111658,https://github.com/BarbourSmith/Abundance/pull/1192,Copilot,agent,other_logic,Fix gcode z-axis origin from bottom to top
+2589255816,https://github.com/wesback/fleetpulse/pull/29,Copilot,agent,other_logic,Fix OpenTelemetry traces not appearing in OTLP Collector
+2677757062,https://github.com/EchoCog/6mlc3o/pull/6,Copilot,agent,crash,Fix Cloudflare Worker memory allocation error during build
+2677465050,https://github.com/bader1919/n8n-claude-prompt-system/pull/19,Copilot,agent,build_ci,Fix ESLint eol-last error blocking CI/CD pipeline
+2385398631,https://github.com/tldraw/tldraw/pull/5606,Cursor,agent,typo_doc,fix(state): update API links in state packages
+2486049582,https://github.com/cockroachdb/cockroach/pull/145347,Cursor,agent,performance,release-24.3: changefeedccl: fix mock kafka server shutdown
+2217293525,https://github.com/WolfSoko/wol-sok-mono/pull/1550,Cursor,agent,build_ci,fix(deps): update dependency @sentry/angular-ivy to v7.120.1
+2726260657,https://github.com/sqreele/fast/pull/69,Cursor,agent,network,Fix user profile type mismatch
+2909356296,https://github.com/langfuse/langfuse/pull/9682,Cursor,agent,other_logic,fix(database-read-stream): when downloading traces/observations as csv annotations scored as zero dropped
+2298605967,https://github.com/callstack/react-native-bottom-tabs/pull/258,Cursor,agent,other_logic,fix(android): properly set android background color
+2425706998,https://github.com/promptfoo/promptfoo/pull/3528,Cursor,agent,other_logic,fix: include reason in python score threshold message
+3018968557,https://github.com/gregcastro23/WhatToEatNext/pull/58,Cursor,agent,security,Fix Content Security Policy violations
+3103662523,https://github.com/mediar-ai/terminator/pull/428,Cursor,agent,build_ci,fix: return result.data from workflow onSuccess handler
+2697414820,https://github.com/DrJLabs/Forgetful/pull/115,Cursor,agent,network,Fix mem0 search when query is None
+2642443919,https://github.com/nodots/nodots-backgammon-cli/pull/2,Cursor,agent,ui,Fix silent command failures in CLI
+2527072714,https://github.com/duneanalytics/sim-docs/pull/21,Cursor,agent,other_logic,fix footers
+3339238576,https://github.com/llun/activities.next/pull/374,Cursor,agent,other_logic,fix(settings): Move fitness import warning into FitnessImport
+2996939646,https://github.com/cartridge-gg/controller/pull/2204,Cursor,agent,other_logic,fix: add definite assignment assertion to Controller properties
+2293931286,https://github.com/keephq/keep/pull/3095,Cursor,agent,other_logic,fix: override default username
+2674196494,https://github.com/leeseonjoo/BallogApp/pull/73,Cursor,agent,network,Fix missing store classes in BallogApp
+3252791888,https://github.com/barelylabs/barely/pull/536,Cursor,agent,other_logic,fix(flows): recalculate dirty state after saving flow
+2682786676,https://github.com/Retr0Hub/MetroKolkata/pull/36,Cursor,agent,security_auth,Stabilize text slide transition
+2716822360,https://github.com/inspirehuge/8n-tiktok-workflow/pull/14,Cursor,agent,ui,Fix missing theme.liquid and validate shopify theme
+2625724507,https://github.com/Sambosis/Slaze/pull/50,Cursor,agent,network,Fix path handling for EditTool
+2665006577,https://github.com/CUTZY/Accounting-app/pull/10,Cursor,agent,security_auth,Cursor/fix login and registration form bugs 41e8
+2436054946,https://github.com/langbot-app/LangBot/pull/1274,Cursor,agent,network,fix: slack is incorrectly enabled as default
+2627531366,https://github.com/mykcryptodev/log-a-dog/pull/84,Cursor,agent,ui,Ensure page bottom padding
+2661482103,https://github.com/jdx/mise/pull/5600,Cursor,agent,other_logic,fix(e2e): simplify test path handling logic
+2332099332,https://github.com/supabase/supabase/pull/33564,Cursor,agent,other_logic,fix: update kt code example
+2555008943,https://github.com/mfts/papermark/pull/1684,Cursor,agent,other_logic,fix: load people properly
+2773532807,https://github.com/Nex2i/dripiq/pull/137,Cursor,agent,performance,Process no click event for email campaign
+2547781947,https://github.com/getsentry/sentry/pull/92368,Cursor,agent,other_logic,fix(releases): Fix missing chartRef w/ `ChartWidgetLoader`
+3114917119,https://github.com/TracecatHQ/tracecat/pull/1816,Cursor,agent,other_logic,fix(registry): Resolve ForwardRef types in UDF model generation
+2641628624,https://github.com/elizaOS/eliza/pull/5399,Cursor,agent,other_logic,fix: preserve avatar when updating secrets from SecretPanel
+2305733608,https://github.com/thirdweb-dev/js/pull/6108,Cursor,agent,other_logic,[Portal] Fix: deployContract doc imports
+2709278141,https://github.com/transloadit/uppy/pull/5862,Cursor,agent,data_parse,Fix remaining package.json imports
+2782886369,https://github.com/getsentry/sentry-javascript/pull/17480,Cursor,agent,network,fix(core): Only set template attributes on logs if parameters exist
+2690719188,https://github.com/sqreele/next_app/pull/8,Cursor,agent,build_ci,Fix import error in seed data script
+2685927096,https://github.com/novuhq/novu/pull/8767,Cursor,agent,network,"fix(dashboard,api): translation fixes & improvements"
+2816526053,https://github.com/elizaOS/eliza/pull/5960,Cursor,agent,network,fix: resolve Buffer to Blob type compatibility error in api-client
+2693766856,https://github.com/devteamexcellis/azurefunctiondotnet/pull/1,Cursor,agent,network,Fix unresponsive cursor in desktop app
+2661873823,https://github.com/Stephen-Collins-tech/intent-kit/pull/15,Cursor,agent,typing,Fix black and mypy errors with uv
+2542564340,https://github.com/sspenst/thinky.gg/pull/1274,Cursor,agent,other_logic,Various bug fixes
+3228509608,https://github.com/trycompai/comp/pull/2082,Cursor,agent,network,[dev] [tofikwest] tofik/fix-trust-portal-domain-error-handling
+3195518762,https://github.com/crewAIInc/crewAI/pull/4263,Devin,agent,other_logic,fix: improve LiteLLM fallback error message for non-native providers
+3064470589,https://github.com/PrefectHQ/prefect/pull/19597,Devin,agent,typo_doc,Fix task caching bug in get_dbt_cloud_run_info for polling loops
+3128403450,https://github.com/exa-labs/flytekit/pull/19,Devin,agent,build_ci,fix(nix): Use fallback pattern for nix profile sourcing
+2446519237,https://github.com/goldmansachsinnovationcenter/case-3.1-tangential/pull/10,Devin,agent,crash,Fix KeyError in system status endpoint
+2315359030,https://github.com/devinjacknz/godtradingbot/pull/12,Devin,agent,other_logic,fix: Improve risk analytics implementation
+2594486293,https://github.com/deetrees/nexvision-ui/pull/1,Devin,agent,performance,Performance Optimization: Fix Memory Leaks in Image Upload Component
+2650206472,https://github.com/evergreen-ci/ui/pull/914,Devin,agent,security,DEVPROD-18958: Convert RDP Password Input to Password Type in Spruce UI
+2536757237,https://github.com/dot-do/mdx/pull/82,Devin,agent,other_logic,Fix publish workflow to correctly detect changeset releases
+2718361059,https://github.com/antiwork/gumboard/pull/77,Devin,agent,other_logic,Prevent empty Slack notifications with enhanced content validation
+2407649679,https://github.com/JonMarkGo-AI-Testing/juice-shop/pull/138,Devin,agent,security,Fix XSS vulnerability in search-result component
+2511605718,https://github.com/orangeman7201/nmo_front/pull/23,Devin,agent,other_logic,モーダルが閉じないバグとレコード作成の問題を修正
+2517297442,https://github.com/brianklai/juice-shop-dev/pull/124,Devin,agent,security,Fix hardcoded credentials vulnerabilities
+2545968289,https://github.com/daqhris/MissionEnrollment/pull/278,Devin,agent,other_logic,Fix ETHDenver event name to include CDP (Coinbase Developer Platform)
+2257862995,https://github.com/madoka3530/firebase_auth_app/pull/1,Devin,agent,build_ci,fix: Update Gradle configuration for proper flavor support
+2405722332,https://github.com/rodmjay/Bespoke/pull/79,Devin,agent,network,Fix Cypress tests
+2457082272,https://github.com/drivly/ai/pull/1284,Devin,agent,ui,fix(sites): Update /sites links on regional domains (ENG-475)
+2375119572,https://github.com/ignaciosgithub/GameEngineSavi/pull/103,Devin,agent,crash,Fix segmentation fault in Model::Render by adding default shader program
+2694210010,https://github.com/michel-de-jong/michel-de-jong.github.io/pull/12,Devin,agent,build_ci,Fix template 404 errors on GitHub Pages deployment
+2741703274,https://github.com/reown-com/reown-docs/pull/601,Devin,agent,typo_doc,Fix Sign API dapp usage docs: replace deprecated @walletconnect/modal with @reown/appkit
+2392380349,https://github.com/kaiachain/kaia-online-toolkit/pull/28,Devin,agent,build_ci,Fix navigate function calls to match expected type definition
+2228612107,https://github.com/daqhris/MissionEnrollment/pull/174,Devin,agent,build_ci,Fix: Network switching and attestation data loading issues
+2441649125,https://github.com/ponzu0147/PC88iOS/pull/151,Devin,agent,network,レジスタ変数名の簡略化とコンパイルエラーの修正
+2594328285,https://github.com/atsushieno/midicci/pull/17,Devin,agent,ui,Fix MIDI CI Discovery Output Connection
+2282314229,https://github.com/jhacksman/llama-titan-conversion/pull/2,Devin,agent,other_logic,fix: revise memory allocation strategy
+2635956726,https://github.com/lix-it/api-docs/pull/35,Devin,agent,typo_doc,Fix Person Enrichment endpoint parameter from sales_nav_id to profile_link
+2939566795,https://github.com/Hopin-inc/civicship-api/pull/514,Devin,agent,other_logic,Fix identity duplicate error when user joins different community
+2582872169,https://github.com/crewAIInc/crewAI/pull/2992,Devin,agent,concurrency,Fix thread safety issue in CrewAIEventsBus (#2991)
+2517376399,https://github.com/brianklai/juice-shop-dev/pull/128,Devin,agent,security,Fix CodeQL vulnerabilities: js/hardcoded-credentials
+2273494357,https://github.com/lightdash/lightdash/pull/13224,Devin,agent,network,fix: remove extra hyphens when emojis are used in slug
+2527128657,https://github.com/brianklai/Dropicana/pull/4,Devin,agent,security,Fix missing-rate-limiting vulnerabilities
+2711676100,https://github.com/SogoGolf/simplegolf-droid/pull/15,Devin,agent,other_logic,Fix hole navigation logic
+2513562053,https://github.com/brianklai/juice-shop-dev/pull/80,Devin,agent,other_logic,Fix: Remove hardcoded passwords from configuration files
+2449949623,https://github.com/nishio/oss_weekly_reporter/pull/16,Devin,agent,other_logic,force pushを防止し、データのバックアップメカニズムを導入
+2311142319,https://github.com/onlook-dev/onlook/pull/1210,Devin,agent,ui,fix: add light mode support for error fix button
+2455618043,https://github.com/pieromarcoz/kpi-processv2/pull/2,Devin,agent,performance,Fix: Resolve Timeout Issues and Implement Missing KPIs
+2441106184,https://github.com/ponzu0147/PC88iOS/pull/138,Devin,agent,network,ArithmeticOpcodes.swift の cycleInfo プロパティを Z80InstructionCycles に更新
+2938834664,https://github.com/liam-hq/liam/pull/3857,Devin,agent,ui,Add fixed workflow status indicator at bottom-left
+2673492586,https://github.com/MajdKhalousi/Golden-Net/pull/5,Devin,agent,ui,Fix WhatsApp button positioning and make it circular
+2391705108,https://github.com/AgentOps-AI/agentops/pull/828,Devin,agent,security_auth,Fix end_session() function signature to match client implementation
+2619510034,https://github.com/smart-social-contracts/ashoka/pull/4,Devin,agent,network,Fix import compatibility for both Flask and CLI contexts
+3274493772,https://github.com/oven-sh/bun/pull/26948,human,bot,security,fix(install): reject unsupported integrity hash algorithms in lockfiles
+2490313539,https://github.com/pytorch/pytorch/pull/152508,human,human,build_ci,[quantizer] Fix quantizer tests after dq conv is enabled
+3006342175,https://github.com/anomalyco/opencode/pull/4285,human,human,network,PATCH /config hot-reload w/ selective cache invalidation (#14)
+2790480916,https://github.com/langflow-ai/langflow/pull/9638,human,human,data_parse,fix: Remove formatting from agent input text content
+3285303542,https://github.com/streamlit/streamlit/pull/13950,human,human,network,Fix AppTest compatibility with patch and @st.dialog
+2581248449,https://github.com/keephq/keep/pull/5003,human,human,typo_doc,fix: Fix boolean handling bug in sqlite
+2472409531,https://github.com/dotnet/runtime/pull/114887,human,human,other_logic,Fix debugger app hangs related to thread exit
+2870211252,https://github.com/StarRocks/starrocks/pull/63711,human,human,other_logic,[DSR-BugFix-242] try to adapt field delimiter for text hive table
+2885819854,https://github.com/ydb-platform/ydb/pull/26355,human,human,typo_doc,Fixed broken links in 25-2
+3239499256,https://github.com/microsoft/azurelinux/pull/15666,human,bot,security,[AutoPR- Security] Patch nodejs24 for CVE-2025-69418 [MEDIUM]
+3308410037,https://github.com/elastic/kibana/pull/254238,human,human,typo_doc,"[9.2] moon: fix moon query, generate src groups for non-ts packages (#253657)"
+2431110937,https://github.com/NethermindEth/nethermind/pull/8452,human,human,other_logic,fix eth_simulates minor issues
+2360892204,https://github.com/elastic/kibana/pull/212600,human,human,security,[9.0] [Security Solution] Fixed Table height row rendering - Event Rendered View (#212130)
+2231601406,https://github.com/elastic/kibana/pull/204014,human,human,security,[Security Solution] AI Assistant: LLM Connector model chooser bug. New chat does not use connector's model (#199303)
+3068769055,https://github.com/oxc-project/oxc/pull/16467,human,human,other_logic,fix(lsp): shutdown a `WorkspaceWorker` will clear diagnostics for all known files
+3075354290,https://github.com/syncfusion/maui-toolkit/pull/305,human,human,other_logic,Fix TabView touch interception for Android 15+
+2898569980,https://github.com/PostHog/posthog/pull/39353,human,human,network,fix: funnel actors and remove funnelCustomSteps
+2676812676,https://github.com/wolfi-dev/os/pull/59923,human,human,other_logic,fix: remove unused melange-microvm-init package
+3171317244,https://github.com/Expensify/App/pull/79511,human,human,crash,fix QBD - Application crashes when try to connect QBD
+3256936612,https://github.com/vercel/turborepo/pull/11710,human,human,build_ci,fix(bun): Preserve `file:` protocol format in bun.lock during `turbo prune`
+2405341515,https://github.com/modelcontextprotocol/inspector/pull/198,human,human,network,fix: set default value for input fields in ToolsTab component
+2651285796,https://github.com/vercel/next.js/pull/81436,human,human,security,fix: referencing unavailable __dirname
+2425611766,https://github.com/mikepenz/multiplatform-markdown-renderer/pull/346,human,human,data_parse,Move parsing into producer | Introduce loading / error state
+2448191787,https://github.com/projectcalico/calico/pull/10176,human,human,typo_doc,[v3.30] Fix up some spammy warning logs
+3241922645,https://github.com/antiwork/gumroad/pull/3341,human,human,network,fix full page reload while navigating emails tab
+3323537070,https://github.com/github-community-projects/issue-metrics/pull/678,human,human,build_ci,fix: resolve pylint config errors breaking super-linter
+2699347631,https://github.com/onlook-dev/onlook/pull/2551,human,human,ui,fix: ui editor sanding
+3110505572,https://github.com/ydb-platform/ydb/pull/30845,human,human,other_logic,Broken tests in ydb/core/tx/schemeshard/ut_pq_reboots
+2909107213,https://github.com/scalar/scalar/pull/7069,human,human,network,fix(api-client): remove form data binary default file
+2655763327,https://github.com/PostHog/posthog/pull/34828,human,human,security_auth,fix(cdp): fixes token refresh logic for salesforce integration
+3291659099,https://github.com/PostHog/posthog/pull/48114,human,human,security_auth,fix: replay modal hangs when timestamp is out of bounds
+2643020784,https://github.com/cline/cline/pull/4664,human,human,ui,fix(ui): Remove blur hover effect from HistoryPreview
+2814744612,https://github.com/github/codeql/pull/20397,human,human,memory,JS: Fix FP in js/build-artifact-leak when keys come from an array of constants
+3329633428,https://github.com/camunda/camunda/pull/46899,human,human,other_logic,fix: graceful schema initialization and add readiness check
+3254051885,https://github.com/microsoft/azurelinux/pull/15750,human,bot,security,[AutoPR- Security] Patch protobuf for CVE-2026-0994 [HIGH]
+2620382214,https://github.com/camunda/camunda/pull/34377,human,bot,other_logic,[Backport stable/8.5] Fix bug where wrong start event got activated
+2798790383,https://github.com/musescore/MuseScore/pull/29680,human,human,network,Fix extra space in bass note slash
+2279786366,https://github.com/LIT-Protocol/js-sdk/pull/765,human,human,other_logic,fix(contracts-sdk): claimAndMint(...) missing stakingContractAddress …
+2670396623,https://github.com/StarRocks/starrocks/pull/60993,human,bot,crash,[BugFix] Fix txn log not exist when batch publish for shared-data arch (backport #60949)
+3058668181,https://github.com/scalar/scalar/pull/7453,human,human,network,fix(openapi-types): wrong type for `exclusiveMinimum` and `exclusiveMaximum`
