@@ -36,6 +36,7 @@ That paper looked at a single snapshot. Here we add **time** and ask how things 
 - Do fixes get bigger or smaller over time? (RQ1b)
 - Do people change which agent they use to fix bugs? (RQ2a)
 - When an agent's fix is rejected, does switching to another agent help? (RQ2b)
+- Do people set up agent "instruction" files for fixing bugs over time? (RQ3)
 - Once merged, do agent fixes stay, or get undone? (RQ4)
 - Which kinds of bugs are agents good or bad at? (RQ5)
 - Does adding a test make a fix more likely to be accepted? (RQ6)
@@ -333,6 +334,42 @@ plt.colorbar(label="count"); plt.tight_layout(); plt.show()
 """, imgs=["rq2b_recovery_breakdown.png", "rq2b_substitution_matrix.png"])
 
 md(r"""
+## RQ3 — Do people set up agent "instructions" for fixing bugs, over time?
+
+A common recommendation is to guide agents with instruction files (`CLAUDE.md`, `.github/copilot-instructions.md`,
+`AGENTS.md`, `.cursorrules`, ...). We check how often an agent bug-fix PR **also edits** one of these files, over time.
+
+**In short: yes, this is taking off.** The share of agent fix PRs that touch an instruction file rose from ~0.03% in
+late 2024 to ~1.9% by mid-2025 (a ~50× jump), then settled around 1.5%. The most common files are `CLAUDE.md`,
+`copilot-instructions.md`, `AGENTS.md`, and `.cursorrules`. *Note:* this only sees instruction files edited **inside a
+fix PR**, so it is a lower bound on overall adoption (most are added in separate setup PRs).
+""")
+
+code(r"""
+INSTR = re.compile(r"(copilot-instructions\.md|(^|/)CLAUDE\.md|(^|/)AGENTS\.md|(^|/)GEMINI\.md|"
+                   r"\.cursorrules|\.cursor/rules|\.windsurfrules|\.github/instructions/|"
+                   r"(^|/)CONVENTIONS\.md|\.aider)", re.I)
+det["instr"] = det["filename"].fillna("").map(lambda f: bool(INSTR.search(f)))
+hit = set(det.loc[det.instr, "pr_id"])
+ag = prs[prs.is_agent].copy()
+ag["touch"] = ag["id"].isin(hit)
+ag["q"] = pd.PeriodIndex(pd.to_datetime(ag["created_at"], utc=True, errors="coerce"), freq="Q").astype(str)
+share = ag.groupby("q")["touch"].mean()*100; cnt = ag.groupby("q")["touch"].sum()
+print(f"agent fix PRs touching an instruction file: {int(ag.touch.sum()):,}/{len(ag):,} "
+      f"({100*ag.touch.mean():.2f}%) across {ag.loc[ag.touch,'repo_id'].nunique():,} repos")
+print(share.round(2).to_string())
+
+qs = list(share.index)
+plt.figure(figsize=(9,5))
+b = plt.bar(qs, share.values, color="#9467bd")
+for bar,v,c in zip(b, share.values, cnt.values):
+    plt.text(bar.get_x()+bar.get_width()/2, v, f"{v:.2f}%\n(n={int(c)})", ha="center", va="bottom", fontsize=8)
+plt.ylabel("% of agent fix PRs that also edit an instruction file"); plt.xlabel("Quarter (PR created)")
+plt.title("RQ3: pairing bug-fixes with agent-instruction files, over time")
+plt.ylim(0, max(share.values)*1.25); plt.grid(axis="y", alpha=.3); plt.tight_layout(); plt.show()
+""", imgs=["rq3_instructions.png"])
+
+md(r"""
 ## RQ4 — Once merged, do agent fixes stay, or get undone? *(matched repos)*
 
 We look for commits that say "This reverts commit ..." and check whether they undo a merged fix.
@@ -477,8 +514,9 @@ md(r"""
 - The bug types (RQ5) come from keywords in the text, so they should be spot-checked by hand before publishing.
 
 **Most solid findings:** people switch agents over time (RQ2a); inside the same projects agents are rejected a bit more
-than humans (RQ1a); switching agents is rare (RQ2b); agent fixes are durable (RQ4); and agents struggle with
-concurrency, type, and security bugs while matching humans on easy fixes (RQ5).
+than humans (RQ1a); switching agents is rare (RQ2b); developers increasingly add agent-instruction files (RQ3);
+agent fixes are durable (RQ4); and agents struggle with concurrency, type, and security bugs while matching humans on
+easy fixes (RQ5).
 """)
 
 nb = new_notebook(cells=cells, metadata={

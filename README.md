@@ -26,6 +26,7 @@ The main notebook (`analysis_trio.ipynb`) answers seven questions. In short:
 | **RQ1b** — Do fixes get bigger or smaller? | Agent fixes are slightly larger (median ~44 vs ~33 lines) and have been getting tighter recently. |
 | **RQ6** — Does adding a test help acceptance? | **Counter-intuitively, no** — fixes with tests are rejected *more* (agents +5 pts). The effect holds even after controlling for fix size. |
 | **RQ2b** — Does switching agents rescue a failed fix? | **Rarely.** When a first agent fix is rejected, recovery is almost always a *retry of the same agent* or a *human takeover*; a different agent succeeds only ~1.8% of the time. |
+| **RQ3** — Do people set up agent instruction files over time? | **Increasingly.** The share of agent fix PRs that also edit an instruction file (`CLAUDE.md`, `copilot-instructions.md`, `AGENTS.md`, `.cursorrules`) rose ~0.03% → ~1.9% (mid-2025), then ~1.5%. |
 | **RQ4** — Do merged fixes get undone (reverted)? | Agent fixes are reverted **less** than human fixes (~0.07% vs ~0.13%). Most fixes are durable. |
 | **RQ5** — Which bug types are agents good/bad at? | Agents struggle most with **concurrency, type, and security** bugs; on easy/cosmetic fixes they match humans. |
 
