@@ -1,134 +1,139 @@
-"""Draws an explanatory methodology diagram for analysis_trio.ipynb."""
+"""Draws a clean, paper-style methodology diagram for analysis_trio.ipynb."""
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
-from matplotlib.lines import Line2D
 
-# palette
-C_DATA   = "#dfe7f3"; C_DATA_E   = "#3b6db5"
-C_SPLIT  = "#f6e2c9"; C_SPLIT_E  = "#cf8a2e"
-C_MATCH  = "#d9efd9"; C_MATCH_E  = "#2e8b3d"
-C_AGENT  = "#f6d6d6"; C_AGENT_E  = "#c0392b"
-C_RQ_M   = "#eaf3ea"; C_RQ_M_E   = "#2e8b3d"
-C_RQ_A   = "#fbeaea"; C_RQ_A_E   = "#c0392b"
-GREY     = "#555555"
+plt.rcParams["font.family"] = "DejaVu Sans"
 
-fig, ax = plt.subplots(figsize=(14, 9.5))
-ax.set_xlim(0, 14); ax.set_ylim(0, 10); ax.axis("off")
+# ---- palette (light fill / saturated edge) --------------------------------
+C_DATA_F, C_DATA_E   = "#e8eef7", "#2f5e9e"   # dataset / agent / human
+C_FAIR_F, C_FAIR_E   = "#fdebd0", "#cf8a2e"   # fairness check
+C_MSET_F, C_MSET_E   = "#d5f0dd", "#1e8449"   # matched design
+C_ASET_F, C_ASET_E   = "#fadbd8", "#c0392b"   # agent-only design
+C_MRQ_F              = "#eafaf0"
+C_ARQ_F              = "#fdeaea"
+C_DL_F,   C_DL_E     = "#ece7f6", "#6c4ea3"   # data layers
+C_MET_F,  C_MET_E    = "#eef0f1", "#7f8c8d"   # methods
+INK   = "#1a1a1a"
+GREY  = "#5b6168"
 
-def box(x, y, w, h, text, fc, ec, fs=10, weight="normal", align="center", round=0.02):
-    ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle=f"round,pad=0.02,rounding_size={round}",
-                                fc=fc, ec=ec, lw=1.6, zorder=2))
-    ha = {"center": "center", "left": "left"}[align]
-    tx = x + w/2 if align == "center" else x + 0.18
-    ax.text(tx, y + h/2, text, ha=ha, va="center", fontsize=fs, weight=weight, zorder=3, color="#1a1a1a")
+fig, ax = plt.subplots(figsize=(13, 9.6))
+ax.set_xlim(0, 13); ax.set_ylim(0, 10); ax.axis("off")
 
-def arrow(x1, y1, x2, y2, color=GREY, style="-|>", lw=1.8, ls="-"):
-    ax.add_patch(FancyArrowPatch((x1, y1), (x2, y2), arrowstyle=style, mutation_scale=16,
-                                 color=color, lw=lw, ls=ls, zorder=1,
-                                 connectionstyle="arc3,rad=0"))
+# thin outer frame for a printed-figure feel
+ax.add_patch(FancyBboxPatch((0.15, 0.12), 12.7, 9.76,
+             boxstyle="round,pad=0,rounding_size=0.12",
+             fc="white", ec="#cfd4da", lw=1.2, zorder=0))
 
-# ---- Title ----
-ax.text(7, 9.75, "Methodology — How AI Coding Agents Fix Bugs Over Time",
-        ha="center", va="center", fontsize=16, weight="bold")
-ax.text(7, 9.32, "Longitudinal follow-up to the MSR'26 rejection paper  ·  GitHub-Agentic-PR-Dataset",
+def box(x, y, w, h, text, fc, ec, fs=10, weight="normal", align="center", lw=1.6):
+    ax.add_patch(FancyBboxPatch((x, y), w, h,
+                 boxstyle="round,pad=0.02,rounding_size=0.04",
+                 fc=fc, ec=ec, lw=lw, zorder=2))
+    if align == "center":
+        ax.text(x + w/2, y + h/2, text, ha="center", va="center",
+                fontsize=fs, weight=weight, color=INK, zorder=3)
+    else:
+        ax.text(x + 0.22, y + h/2, text, ha="left", va="center",
+                fontsize=fs, weight=weight, color=INK, zorder=3)
+
+def rq_block(x, y, w, h, title, lines, fc, ec):
+    ax.add_patch(FancyBboxPatch((x, y), w, h,
+                 boxstyle="round,pad=0.02,rounding_size=0.04",
+                 fc=fc, ec=ec, lw=1.6, zorder=2))
+    ax.text(x + w/2, y + h - 0.27, title, ha="center", va="center",
+            fontsize=9.5, weight="bold", color=ec, zorder=3)
+    body = "\n".join(lines)
+    ax.text(x + 0.28, y + h - 0.62, body, ha="left", va="top",
+            fontsize=9, color=INK, zorder=3, linespacing=1.45)
+
+def arrow(x1, y1, x2, y2, color=GREY, lw=1.8, rad=0.0, ls="-"):
+    ax.add_patch(FancyArrowPatch((x1, y1), (x2, y2), arrowstyle="-|>",
+                 mutation_scale=15, color=color, lw=lw, ls=ls, zorder=1,
+                 connectionstyle=f"arc3,rad={rad}"))
+
+# ---- title ----------------------------------------------------------------
+ax.text(6.5, 9.55, "How AI Coding Agents Fix Bugs Over Time — Study Design",
+        ha="center", va="center", fontsize=16, weight="bold", color=INK)
+ax.text(6.5, 9.18, "Longitudinal follow-up to the MSR'26 rejection paper   ·   GitHub-Agentic-PR-Dataset",
         ha="center", va="center", fontsize=10.5, color=GREY, style="italic")
 
-# ---- 1. Dataset ----
-box(4.0, 8.25, 6.0, 0.75,
-    "422,618 bug-fix PRs  ·  Dec 2024 – Feb 2026 (15 months)",
-    C_DATA, C_DATA_E, fs=11, weight="bold")
+# ---- 1. dataset -----------------------------------------------------------
+box(3.95, 8.30, 5.1, 0.62, "422,618 bug-fix PRs   ·   Dec 2024 – Feb 2026  (15 months)",
+    C_DATA_F, C_DATA_E, fs=10.5, weight="bold")
 
-# ---- 2. Split agent / human ----
-arrow(6.0, 8.25, 4.3, 7.55)
-arrow(8.0, 8.25, 9.7, 7.55)
-box(2.0, 6.85, 4.5, 0.7, "Agent fixes  ·  121,832\n(Claude Code, Cursor, Copilot, Devin)",
-    C_DATA, C_DATA_E, fs=9.5)
-box(7.5, 6.85, 4.5, 0.7, "Human fixes  ·  300,786",
-    C_DATA, C_DATA_E, fs=9.5)
+# ---- 2. split agent / human ----------------------------------------------
+arrow(5.7, 8.30, 4.35, 7.92)
+arrow(7.3, 8.30, 8.65, 7.92)
+box(2.55, 7.30, 3.4, 0.62, "Agent fixes · 121,832",       C_DATA_F, C_DATA_E, fs=10)
+ax.text(4.25, 7.16, "Claude Code · Cursor · Copilot · Devin",
+        ha="center", va="top", fontsize=7.8, color=GREY, style="italic")
+box(7.05, 7.30, 3.4, 0.62, "Human fixes · 300,786",       C_DATA_F, C_DATA_E, fs=10)
 
-# ---- 3. Fairness check + matched filter ----
-box(0.4, 5.55, 6.1, 0.85,
-    "FAIRNESS CHECK: project type drives rejection\n"
-    "shared 18.1%/15.1%  vs  single-type 14.7%/10.9%",
-    C_SPLIT, C_SPLIT_E, fs=9)
-arrow(4.25, 6.85, 3.45, 6.42)
+# ---- 3a. agent-only design (left lane) ------------------------------------
+arrow(3.8, 7.30, 3.35, 5.88, color=C_ASET_E, lw=1.9)
+box(0.70, 4.95, 5.20, 0.92,
+    "AGENT-ONLY DESIGN\nfull agent data  ·  no human baseline",
+    C_ASET_F, C_ASET_E, fs=10, weight="bold")
 
-box(0.4, 4.25, 6.1, 0.95,
-    "MATCHED SET  →  1,218 repos with BOTH kinds\n"
-    "Agent 47,925  ·  Human 287,358\n"
-    "(controls for project; isolates agent-vs-human)",
-    C_MATCH, C_MATCH_E, fs=9.5, weight="bold")
-arrow(3.45, 5.55, 3.45, 5.22)
+# ---- 3. fairness check (right, motivates matched design) ------------------
+arrow(5.2, 7.30, 6.9, 6.97, color=GREY)
+arrow(8.4, 7.30, 9.7, 6.97, color=GREY)
+box(5.95, 6.18, 6.35, 0.80,
+    "FAIRNESS CHECK — the project, not just the author, drives rejection\n"
+    "shared repos 18.1% / 15.1%      vs      single-type repos 14.7% / 10.9%",
+    C_FAIR_F, C_FAIR_E, fs=9.2)
 
-# all-agent path  (branches from the AGENT box, not human)
-box(7.5, 5.55, 4.5, 0.85,
-    "ALL-AGENT SET  →  full agent data\n(agent-only questions, no human baseline)",
-    C_AGENT, C_AGENT_E, fs=9.5, weight="bold")
-ax.add_patch(FancyArrowPatch((6.5, 7.05), (9.75, 6.42), arrowstyle="-|>", mutation_scale=16,
-                             color=C_AGENT_E, lw=1.8, zorder=1,
-                             connectionstyle="arc3,rad=-0.25"))
+# ---- 3b. matched design (right lane) --------------------------------------
+arrow(9.12, 6.18, 9.12, 5.88, color=C_MSET_E, lw=1.9)
+box(5.95, 4.95, 6.35, 0.92,
+    "MATCHED DESIGN — fair agent vs human\n"
+    "1,218 repos with BOTH kinds  ·  Agent 47,925 · Human 287,358",
+    C_MSET_F, C_MSET_E, fs=10, weight="bold")
 
-# ---- 4. Data layers (left side, feeding analyses) ----
-box(0.4, 2.55, 3.0, 1.25,
-    "DATA LAYERS\n"
-    "• PR meta (state, dates,\n   agent)\n"
-    "• File changes → churn,\n   tests, instruction files\n"
-    "• Commit msgs → reverts",
-    "#f3f1f7", "#7b5ea7", fs=8.2, align="left")
+# ---- research questions ---------------------------------------------------
+arrow(3.30, 4.95, 3.30, 4.47, color=C_ASET_E)
+arrow(9.12, 4.95, 9.12, 4.47, color=C_MSET_E)
 
-# ---- 5a. Matched-repo RQs ----
-box(3.8, 2.55, 4.0, 1.55,
-    "MATCHED  (agent vs human)\n"
-    "RQ1a  rejection rate over time\n"
-    "RQ1b  fix size (code churn)\n"
-    "RQ4   reverts after merge\n"
-    "RQ5   rejection by bug type\n"
-    "RQ6   does adding a test help?",
-    C_RQ_M, C_RQ_M_E, fs=9, align="left")
-arrow(3.45, 4.25, 5.8, 4.10)
+rq_block(0.70, 2.95, 5.20, 1.50, "AGENT-ONLY QUESTIONS",
+    ["RQ2a   which agent is used over time",
+     "RQ2b   does switching agents rescue",
+     "             a rejected fix?",
+     "RQ3     instruction-file adoption"],
+    C_ARQ_F, C_ASET_E)
 
-# ---- 5b. All-agent RQs ----
-box(8.3, 2.55, 3.9, 1.55,
-    "ALL-AGENT\n"
-    "RQ2a  which agent is used\n"
-    "RQ2b  does switching agents\n         rescue a rejected fix?\n"
-    "RQ3   instruction-file\n         adoption over time",
-    C_RQ_A, C_RQ_A_E, fs=9, align="left")
-arrow(9.75, 5.55, 10.25, 4.10)
+rq_block(5.95, 2.95, 6.35, 1.50, "MATCHED QUESTIONS  (agent vs human)",
+    ["RQ1a  rejection rate over time          RQ5  rejection by bug type",
+     "RQ1b  fix size (code churn)               RQ6  does adding a test help?",
+     "RQ4    reverts after merge"],
+    C_MRQ_F, C_MSET_E)
 
-# data layers feed both RQ blocks
-arrow(2.4, 2.55, 4.2, 2.2, color="#7b5ea7", ls="--", lw=1.3)
-arrow(3.4, 3.1, 3.78, 3.2, color="#7b5ea7", ls="--", lw=1.3)
+# ---- shared data layers (feeds every RQ) ----------------------------------
+arrow(3.30, 2.78, 3.30, 2.93, color=C_DL_E, lw=1.4)
+arrow(9.12, 2.78, 9.12, 2.93, color=C_DL_E, lw=1.4)
+ax.add_patch(FancyBboxPatch((0.70, 2.00), 11.60, 0.78,
+             boxstyle="round,pad=0.02,rounding_size=0.04",
+             fc=C_DL_F, ec=C_DL_E, lw=1.6, zorder=2))
+ax.text(6.5, 2.56, "SHARED DATA LAYERS  —  derived once, used by every RQ",
+        ha="center", va="center", fontsize=9.4, weight="bold", color=C_DL_E, zorder=3)
+ax.text(6.5, 2.23, "PR metadata    ·    file changes → churn / tests / instruction files    "
+        "·    commit messages → reverts",
+        ha="center", va="center", fontsize=9.0, color=INK, zorder=3)
 
-# ---- 6. Methods footer ----
-box(0.4, 1.35, 11.8, 0.8,
-    "METHODS:  monthly trend lines   ·   Spearman trend test   ·   χ² for test-inclusion effect   ·   "
-    "churn-binned robustness re-check (RQ6)",
-    "#eeeeee", "#888888", fs=9.5, weight="bold")
-arrow(5.8, 2.55, 6.3, 2.15, lw=1.3)
-arrow(10.25, 2.55, 8.0, 2.15, lw=1.3)
+# ---- methods --------------------------------------------------------------
+box(0.70, 1.22, 11.60, 0.60,
+    "METHODS:   monthly trend lines   ·   Spearman trend test   ·   "
+    "χ² for test-inclusion (RQ6)   ·   churn-binned robustness re-check",
+    C_MET_F, C_MET_E, fs=9.0, weight="bold")
 
-# ---- 7. Limits footer ----
-ax.text(7, 0.78,
-        "Conservative definitions:  rejected = closed & never merged   ·   rate over DECIDED PRs only (open dropped)",
-        ha="center", va="center", fontsize=9, color="#1a1a1a")
-ax.text(7, 0.42,
-        "Stated limits:  issue-linking covers ~18% of PRs (RQ2b)   ·   reverts are a lower bound   ·   RQ5 bug types are keyword-derived",
-        ha="center", va="center", fontsize=8.5, color=GREY, style="italic")
+# ---- definitions / limits footer -----------------------------------------
+ax.text(6.5, 0.82,
+        "Conservative definitions:  rejected = closed & never merged   ·   "
+        "rate computed over DECIDED PRs only (open PRs dropped)",
+        ha="center", va="center", fontsize=8.4, color=INK)
+ax.text(6.5, 0.50,
+        "Stated limits:  issue-linking covers ~18% of PRs (RQ2b)   ·   "
+        "reverts are a lower bound   ·   RQ5 bug types are keyword-derived",
+        ha="center", va="center", fontsize=8.0, color=GREY, style="italic")
 
-# legend
-legend = [
-    Line2D([0],[0], marker="s", color="w", markerfacecolor=C_MATCH, markeredgecolor=C_MATCH_E,
-           markersize=13, label="Matched-repo path (fair agent vs human)"),
-    Line2D([0],[0], marker="s", color="w", markerfacecolor=C_AGENT, markeredgecolor=C_AGENT_E,
-           markersize=13, label="All-agent path (agent-only questions)"),
-    Line2D([0],[0], marker="s", color="w", markerfacecolor="#f3f1f7", markeredgecolor="#7b5ea7",
-           markersize=13, label="Shared data layers"),
-]
-ax.legend(handles=legend, loc="upper right", bbox_to_anchor=(0.985, 0.985),
-          frameon=True, fontsize=8.5, ncol=1)
-
-plt.tight_layout()
 out = r"C:\Users\Mahmoudabujadallah\final_agantic_bugfixes\methodology_figure.png"
-plt.savefig(out, dpi=150, bbox_inches="tight")
+plt.savefig(out, dpi=200, bbox_inches="tight", facecolor="white")
 print("saved", out)
